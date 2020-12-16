@@ -1,129 +1,467 @@
 <!DOCTYPE html>
-<html style="width: 100%;">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>日照曦彩网络科技有限公司</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"> -->
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"> -->
-    <link rel="stylesheet" href="assets/css/untitled.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朗图科技</title>
+    <link rel="stylesheet" href="homePage/css/footer.css">
+    <link rel="stylesheet" href="homePage/css/navbar.css">
+    <script> window.ppSettings = {app_uuid:'89ad9d6a-0abf-11eb-839e-00163e0c79f6',server_url:'https://ppmessage.cn'};(function(){var w=window,d=document;function l(){var a=d.createElement('script');a.type='text/javascript';a.async=!0;a.charset='utf-8';a.src='https://ppmessage.cn/ppcom/assets/shim/shim.js';var b=d.getElementsByTagName('script')[0];b.parentNode.insertBefore(a,b)}l();})();</script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #F6F7FB;
+        }
+        .game_info{
+            width: 1200px;
+            min-height: 100px;
+            margin: auto;
+        }
+        .game_info_nav{
+            width: 100%;
+            height: 100px;
+            position: relative;
+        }
+        .game_info_bar{
+            width: 6px;
+            height: 30px;
+            background-color: #E8C11D;
+            position: absolute;
+            left: 20px;
+            bottom: 24px;
+        }
+        .game_info_title{
+            font-size: 22px;
+            color: #333;
+            position: absolute;
+            left: 42px;
+            bottom: 24px;
+        }
+        .game_info_subTitle{
+            font-size: 16px;
+            color: #666;
+            position: absolute;
+            left: 140px;
+            bottom: 24px;
+        }
+        .game_info_box{
+            width: 100%;
+            min-height: 100px;
+        }
+        .pre_game_info_box{
+            width: 338px;
+            height: 366px;
+            margin-right: 42px;
+            margin-left: 20px;
+            margin-bottom: 40px;
+            float: left;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .pre_game_info_box_head{
+            width: 338px;
+            height: 209px;
+            position: relative;
+        }
+        .pre_game_info_box_head_download{
+            width: 338px;
+            height: 209px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 666;
+            opacity: 0;
+        }
+        .pre_game_info_box_head_download_show{
+            opacity: 1;
+            animation: rollDown 0.3s ease-in-out;
+        }
+        .pre_game_info_box_head_download:hover{
+            opacity: 1;
+        }
+        .pre_game_info_box_head_download:hover{
+            animation: rollDown 0.3s ease-in-out;
+        }
+        @keyframes rollDown {
+            0%{
+                transform: translateY(-209px); 
+            }
+            100%{
+                transform: translateY(0); 
+            }
+        }
+        .pre_game_info_box_head_download_qrcode{
+            width: 134px;
+            height: 134px;
+            position: absolute;
+            left: 102px;
+            top: 29px;
+        }
+        .pre_game_info_box_head_download_qrcode_text{
+            text-align: center;
+            font-size: 14px;
+            color: #FFFFFF;
+            width: 100%;
+            position: absolute;
+            top: 173px;
+        }
+        .pre_game_info_box_title{
+            position: relative;
+            margin-top: 16px;
+            left: 14px;
+            font-size: 20px;
+            color: #333;
+        }
+        .pre_game_info_box_content{
+            width: 294px;
+            min-height: 50px;
+            position: relative;
+            margin-top: 8px;
+            left: 22px;
+            font-size: 14px;
+            color: #999;
+        }
+        .pre_game_info_box_line{
+            width: 294px;
+            height: 1px;
+            background-color: #eee;
+            position: absolute;
+            left: 22px;
+            bottom: 48px;
+        }
+        .pre_game_info_box_play{
+            position: absolute;
+            bottom: 14px;
+            right: 48px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+        }
+        .pre_game_info_box_play:hover{
+            color: #E8C11D;
+        }
+        .pre_game_info_box_next{
+            position: absolute;
+            bottom: 18px;
+            right: 22px;
+            width: 14px;
+            height: 12px;
+        }
+        .about_info{
+            width: 1200px;
+            margin: auto;
+            min-height: 100px;
+            margin-top: 24px;
+        }
+        .about_us_box{
+            width: 100%;
+            height: 416px;
+            position: relative;
+        }
+        .about_us_head{
+            width: 500px;
+            height: 330px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: yellowgreen;
+            background-image: url(homePage/icpimg/aboutus_bg.png);
+            background-size: 100%;
+        }
+        .about_us_content{
+            width: 822px;
+            height: 243px;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.5);
+            left: 358px;
+            top: 49px;
+            overflow: hidden;
+            /* filter: blur(2px); */
+        }
+        .about_us_content::before{
+            content: "";
+            position: absolute;
+            width: 822px;
+            height: 243px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            /* background-color: rgba(255, 255, 255, 0.9); */
+            background: inherit;
+            background-attachment: fixed;
+            filter: blur(9px);
+        }
+        .about_us_content::after{
+            content: "";
+            position: absolute;
+            width: 822px;
+            height: 243px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .about_us_inner_content{
+            width: 762px;
+            height: 200px;
+            font-size: 14px;
+            color: #333;
+            position: absolute;
+            left: 30px;
+            top: 23px;
+            letter-spacing: 0;
+            text-align: justify;
+            line-height: 40px;
+            z-index: 1;
+        }
+        .pre_game_info_box_dev{
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            line-height: 30px;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            top:179px;
+        }
+        .pre_game_info_box_icon{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 22px;
+            bottom: 7px;
+        }
+        .kefu{
+            position: fixed;
+            right: 10px;
+            bottom: 50px;
+        }
+    </style>
 </head>
-
-<body id="page-top">
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="width: 100%;">
-        <div class="container"><a class="navbar-brand js-scroll-trigger brander" href="#page-top" style="color: #000000;background-image: url(&quot;assets/img/qicai/logo.png&quot;);width: 237px;height: 36px;"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
-                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: #000000;"><i class="fa fa-align-justify"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#banner" style="color: #292929;">首页</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#services" style="color: #292929;">关于我们</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#about" style="color: #292929;">产品与服务</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact" style="color: #292929;">联系我们</a></li>
-                </ul>
+<body>
+    <section>
+        <div class="nav_bar_box">
+            <div class="nav_bar_inner">
+                <div class="nav_bar_icon">
+                    <img src="homePage/icpimg/logo.png" class="logo_icon" alt="">
+                </div>
+                <a class="pre_option option_select" href="#">首页</a>
+                <a class="pre_option" href="homePage/libary.html">游戏推荐</a>
+                <a class="pre_option" href="homePage/about.html">关于我们</a>
+                <a class="pre_option" href="homePage/parents.html">家长监护</a>
+                <a class="pre_option" href="homePage/charge.html">充值中心</a>
+                <a class="pre_option" href="homePage/register.html">免费注册</a>
+                <a class="pre_option" href="homePage/login.html">立即登录</a>
             </div>
         </div>
-    </nav>
-    <header id="banner" class="masthead text-center text-white d-flex" style="background-image: url(&quot;assets/img/qicai/banner_img.jpg&quot;);background-size: cover;background-repeat: no-repeat;background-position: top;height: 401px;min-height: 401px;margin-top: 57px;color: rgb(255,255,255);filter: blur(0px) saturate(100%) sepia(0%);">
-        <div class="container shadow .newservices" id="services" style="background-color: #ffffff;width: 70%;/*padding-left: 15px;*/position: absolute;left: 50%;transform: translateX(-50%);padding-bottom: 0px;height: auto;">
-            <h3 style="color: #333333;margin-top: 30px;">关于我们<br></h3>
-            <hr style="margin-top: 10px;margin-bottom: 15px;">
-            <p style="color: #333333;">核心成员来自上市软件公司，逾十五年的研发运营从业经历<br>提供覆盖iOS、Android、HTML5/VUE、微信小程序、PHP/JAVA的解决方案<br>阿里云、腾讯云、京东云、微信支付、蚂蚁金服、通联支付等多个互联网巨头平台合作商<br></p>
-        </div>
-    </header>
-    <section id="about">
-        <div class="container" style="margin-bottom: 100px;margin-top: 100px;">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading section-heading_query" style="height: 30px;margin: auto;margin-bottom: 30px;background-image: url(&quot;assets/img/qicai/title_img.png&quot;);background-repeat: no-repeat;/*background-position: center;*/">产品与服务</h2>
+    </section>
+    <section>
+        <div class="game_info">
+            <div class="game_info_nav">
+                <div class="game_info_bar"></div>
+                <div class="game_info_title">自营游戏</div>
+                <div class="game_info_subTitle">SELF-OPERATED GAME</div>
+            </div>
+            <div class="game_info_box">
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/zhuawawa_bg.png" />
+                    <!-- <div class="pre_game_info_box_head_download" id="wawaDownload">
+                        <img src="homePage/icpimg/zhuawawa.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div> -->
+                    <div class="pre_game_info_box_title">《 抓娃娃 》</div>
+                    <div class="pre_game_info_box_content">女生最爱的益智娱乐小游戏，在线玩的抓娃娃机。多视角定位开抓，超高抓中率！</div>
+                    <div class="pre_game_info_box_dev">开发商“朗图科技”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/zhuawawa_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="https://www.zhuagewawa.com/download/android?appid=10001">安卓下载</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
                 </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/plane_bg.jpg" />
+                    <!-- <div class="pre_game_info_box_head_download" id="planeDownload">
+                        <img src="homePage/icpimg/plane.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div> -->
+                    <div class="pre_game_info_box_title">《 飞机战场 》</div>
+                    <div class="pre_game_info_box_content">这是一款涂鸦风格的空战游戏，游戏画面精美，操控简单。</div>
+                    <div class="pre_game_info_box_dev">开发商“朗图科技”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/plane_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="https://kofu.xyz/plane-release.apk">安卓下载</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/chess_bg.jpg" />
+                    <!-- <div class="pre_game_info_box_head_download" id="chessDownload">
+                        <img src="homePage/icpimg/chess.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div> -->
+                    <div class="pre_game_info_box_title">《 国际象棋 》</div>
+                    <div class="pre_game_info_box_content">游戏拥有强大的对战功能，游戏内功能齐全，拥有保存，悔棋等功能。</div>
+                    <div class="pre_game_info_box_dev">开发商“朗图科技”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/chess_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="https://kofu.xyz/chess-release.apk">安卓下载</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="game_info_nav">
+                <div class="game_info_bar"></div>
+                <div class="game_info_title">手游推荐</div>
+                <div class="game_info_subTitle">MOBILE GAME</div>
+            </div>
+            <div class="game_info_box">
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/xianjie_bg.png" />
+                    <div class="pre_game_info_box_head_download" id="xianDownload">
+                        <img src="homePage/icpimg/xianjie_code.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div>
+                    <div class="pre_game_info_box_title">《 仙界奇迹 》</div>
+                    <div class="pre_game_info_box_content">多样化的场景，智能轻松挂机，开放交易市场，多副本爆神装，带给玩家沉醉式体验。</div>
+                    <div class="pre_game_info_box_dev">开发商“上海纯游”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/xianjie_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="#" onclick="showDownload('xian')">下载游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/jiu_bg.png" />
+                    <div class="pre_game_info_box_head_download" id="jiuDownload">
+                        <img src="homePage/icpimg/jiu_code.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div>
+                    <div class="pre_game_info_box_title">《 九阴九阳 》</div>
+                    <div class="pre_game_info_box_content">经典武侠玩法，重温金庸武侠世界！数十种侠客卡牌，组合多样，对战激烈！</div>
+                    <div class="pre_game_info_box_dev">开发商“奇创星动”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/jiu_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="#" onclick="showDownload('jiu')">下载游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/anhei_bg.png" />
+                    <div class="pre_game_info_box_head_download" id="anheiDownload">
+                        <img src="homePage/icpimg/anhei_code.png" class="pre_game_info_box_head_download_qrcode">
+                        <div class="pre_game_info_box_head_download_qrcode_text">手机扫码下载</div>
+                    </div>
+                    <div class="pre_game_info_box_title">《 暗黑世界 》</div>
+                    <div class="pre_game_info_box_content">一款MMORPG角色扮演类手游，玩家可以选择一个“战士、法师、道士”职业为自己的英雄。</div>
+                    <div class="pre_game_info_box_dev">开发商“江苏众云”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <img src="homePage/icpimg/anhei_icon.png" class="pre_game_info_box_icon" alt="pre_game_info_box_icon">
+                    <a class="pre_game_info_box_play" href="#" id="anhei" onclick="showDownload('anhei')">下载游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="game_info_nav">
+                <div class="game_info_bar"></div>
+                <div class="game_info_title">网游推荐</div>
+                <div class="game_info_subTitle">ONLINE GAME</div>
+            </div>
+            <div class="game_info_box">
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_anhei_bg.png" />
+                    <div class="pre_game_info_box_title">《暗黑大天使》</div>
+                    <div class="pre_game_info_box_content">五军之战震撼来袭！已进行军团匹配定级的军团可参与五军之战！</div>
+                    <div class="pre_game_info_box_dev">开发商“三七互娱”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="https://game.37.com/server_list_577.html">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_shenmo_bg.png" />
+                    <div class="pre_game_info_box_title">《 神魔传说 》</div>
+                    <div class="pre_game_info_box_content">史诗级魔幻变身ARPG页游巨制，以中国古代神话故事和封神传说故事等作为游戏背景。</div>
+                    <div class="pre_game_info_box_dev">开发商“三七互娱”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="https://game.37.com/server_list_657.html">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_zhanshen_bg.png" />
+                    <div class="pre_game_info_box_title">《 战神觉醒 》</div>
+                    <div class="pre_game_info_box_content">怀旧写实，力求营造出写实逼真效果，魔幻哥特游戏音乐，完美地体现画面的氛围。</div>
+                    <div class="pre_game_info_box_dev">开发商“三七互娱”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="https://game.37.com/server_list_288.html">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_36_bg.png" />
+                    <div class="pre_game_info_box_title">《 战神三十六计 》</div>
+                    <div class="pre_game_info_box_content">以三十六计和一统天下为战略核心，为广大策略爱好者提供了开拓疆土、群雄逐鹿的机会。</div>
+                    <div class="pre_game_info_box_dev">开发商“游族网络”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="http://36.youzu.com/server">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_dahuangdi_bg.png" />
+                    <div class="pre_game_info_box_title">《 大皇帝 》</div>
+                    <div class="pre_game_info_box_content">128座城池，组建自己的势力，亲身参与东汉末年争夺天下霸权的三国征途！</div>
+                    <div class="pre_game_info_box_dev">开发商“游族网络”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="http://king.youzu.com/server">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div class="pre_game_info_box">
+                    <img class="pre_game_info_box_head" src="homePage/icpimg/game_nvshen_bg.png" />
+                    <div class="pre_game_info_box_title">《 女神联盟2 》</div>
+                    <div class="pre_game_info_box_content">还原女神联盟系列经典，百位女神等待领取，至美魔幻画面，双怒气爆屏必杀畅快战斗！</div>
+                    <div class="pre_game_info_box_dev">开发商“游族网络”</div>
+                    <div class="pre_game_info_box_line"></div>
+                    <a class="pre_game_info_box_play" href="http://mm2.youzu.com/server">开始游戏</a>
+                    <img src="homePage/icpimg/next2_icon.png" class="pre_game_info_box_next" alt="">
+                </div>
+                <div style="clear: both;"></div>
             </div>
         </div>
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6 col-lg-3 text-center solobar" style="border-width: 2px;border-color: #eeeeee;border-style: solid;">
-                    <div class="flex-column mx-auto service-box mt-5"><img class="shadow-none" src="assets/img/qicai/game_img.png" width="100" height="99" style="margin-bottom: 15px;/*width: 100%;*//*height: auto;*/">
-                        <h3 class="mb-3" style="font-size: 22px;color: #333333;">手机游戏研发</h3>
-                        <p class="text-muted mb-0" style="color: #979797;">致力于Android、ios游戏领域的研发运营。丰富的运营经验</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center solobar" style="border-width: 2px;border-color: #eeeeee;border-style: solid;">
-                    <div class="mx-auto service-box mt-5"><img class="shadow-none" src="assets/img/qicai/app_img.png" width="100" height="99" style="margin-bottom: 15px;/*width: 100%;*//*height: auto;*/">
-                        <h3 class="mb-3" style="font-size: 22px;color: #333333;">APP定制开发</h3>
-                        <p class="text-muted mb-0" style="color: #979797;">深度定制服务，为客户提供移动互联网一站式解决方案</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center solobar" style="border-width: 2px;border-color: #eeeeee;border-style: solid;">
-                    <div class="mx-auto service-box mt-5"><img class="shadow-none" src="assets/img/qicai/zhihui_img.png" width="100" height="99" style="margin-bottom: 15px;/*width: 100%;*//*height: auto;*/">
-                        <h3 class="mb-3" style="font-size: 22px;color: #333333;">智慧城市解决方案</h3>
-                        <p class="text-muted mb-0" style="color: #979797;">依托WIFI建立城市生活圈，根据用户体验与数据分析拉动线上消费、020等同城消费</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center solobar" style="border-width: 2px;border-color: #eeeeee;border-style: solid;padding-bottom: 60px;/*margin-right: 0px;*/">
-                    <div class="mx-auto service-box mt-5"><img class="shadow-none" src="assets/img/qicai/yun_imh.png" width="100" height="99" style="margin-bottom: 15px;/*width: 100%;*//*height: auto;*/">
-                        <h3 class="mb-3" style="font-size: 22px;color: #333333;">教育云解决方案</h3>
-                        <p class="text-muted mb-0" style="color: #979797;">强大的CDN与云存储，涵盖课程、教学、办公自动化、考试的教学平台</p>
+    </section>
+    <section>
+        <div class="about_info">
+            <div class="game_info_nav">
+                <div class="game_info_bar"></div>
+                <div class="game_info_title">关于我们</div>
+                <div class="game_info_subTitle">ABOUT US</div>
+            </div>
+            <div class="about_us_box">
+                <div class="about_us_head" src="homePage/icpimg/aboutus_bg.png">
+                    <div class="about_us_content">
+                        <div class="about_us_inner_content">杭州朗图科技有限公司由来自上市软件企业的资深团队创立，致力于推动网络游戏行业的发展。2012年成立以来，朗图坚持自主研发，推出多款自营手机游戏，同时代理和运营十余款风格迥异的网页游戏，立足“产品+流量+用户”精细化运营思路，取得了优异的成绩，获得了海量游戏玩家的青睐。目前，朗图已与国内多家知名游戏公司建立战略合作关系，是一家具备手游开发、游戏运营、渠道推广实力的大型互联网公司。朗图全体员工始终坚持用心服务与每一位游戏玩家，通过专业的积累和不懈的努力，致力于成为互联网行业的互动娱乐综合性公司。</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="portfolio" class="p-0">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters popup-gallery">
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/1.jpg"><img class="img-fluid" src="assets/img/qicai/img01.jpg"></a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/2.jpg"><img class="img-fluid" src="assets/img/qicai/img02.jpg"></a></div>
-                <div class="col-sm-6 col-lg-4"><a class="portfolio-box" href="assets/img/fullsize/3.jpg"><img class="img-fluid" src="assets/img/qicai/img03.jpg"></a></div>
-            </div>
+    <section style="background-color: #282D33;">
+        <div class="footer">
+            <div class="footer_tip1">本平台适合用户年龄12+</div>
+            <div class="footer_tip2">健康游戏公告：抵制不良游戏  拒绝盗版游戏  注意自我保护 谨防受骗上当  适度游戏益脑  沉迷游戏伤身  合理安排时间  享受健康生活</div>
+            <div class="footer_tip3">杭州朗图科技有限公司  公司地址：浙江省杭州市西湖区西港发展中心西3幢602室  联系邮箱：lotogram@gmail.com  客服QQ：3357558010</div>
+            <div class="footer_tip4"> <img src="homePage/icpimg/beian_icon.png" class="footer_police" alt=""> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602010150" class="footer_police">浙公网安备 33010602010150号</a> 浙ICP备17040946号 <a href="http://t.zhuagewawa.com/homePage/pic.html" class="footer_link">浙网文[2018]7333-584号</a></div>
+            <a class="footer_tip5" href="homePage/teen.html">防沉迷系统 | 纠纷处理</a>
         </div>
     </section>
-    <section id="contact">
-        <div class="container" style="/*overflow-y: auto;*/">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center" style="padding-bottom: 55px;">
-                    <h2 class="section-heading">联系我们</h2>
-                </div>
-            </div>
-            <div class="row lowRow" style="display: flex;">
-                <div class="col minBar" style="flex-shrink: 0;">
-                    <p class="text-left" style="font-size: 18px;color: #666666;">日照曦彩网络科技有限公司<br>地址：山东省日照市岚山区岚山头佛手湾村398号<br>联系人：于先生（客户服务）<br>邮编：276808<br></p>
-                </div>
-                <div class="col d-flex flex-row-reverse" style="height: auto;flex-shrink: 0;">
-                    <div class="row text-monospace text-nowrap d-flex flex-row-reverse lowsAlgin" style="margin-right: 0px;width: 100%;margin-left: 0px;height: auto;">
-                        <div class="col-lg-4 mr-auto text-center lowsBox" style="margin: 0px;margin-right: 0px;/*width: 50%;*/max-width: 50%;min-width: 50%;height: auto;"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true" style="margin-top: 15px;"></i>
-                            <p><a class="alginLeft" href="mailto:your-email@your-domain.com" style="color: #666666;">邮箱：qicai2019@yeah.net</a></p>
-                        </div>
-                        <div class="col-lg-4 ml-auto text-center lowsBox" style="margin: 0px;margin-left: 0px;/*width: 50%;*/max-width: 50%;min-width: 50%;height: auto;"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" style="margin-top: 15px;"></i>
-                            <p class="alginLeft" style="color: #666666;">电话：19963365859</p>
-                        </div>
-                        <div class="col hideIt">
-                            <div class="row">
-                                <div class="col" style="padding-right: 0px;padding-left: 0px;width: 100%;"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true" style="margin-top: 15px;"></i>
-                                    <p><a class="alginLeft" href="mailto:your-email@your-domain.com" style="color: #666666;">邮箱：qicai2019@yeah.net</a></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col" style="padding-right: 0px;padding-left: 0px;width: 100%;"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true" style="margin-top: 15px;"></i>
-                                    <p class="alginLeft" style="color: #666666;">电话：19963365859</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/creative.js"></script>
-    <script src="assets/js/bs-animation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script>
+        var showDownload=(id)=>{
+            var downloadBoard=document.getElementById(id+"Download");
+            downloadBoard.classList.add("pre_game_info_box_head_download_show");
+            setTimeout(() => {
+                downloadBoard.classList.remove("pre_game_info_box_head_download_show")
+            }, 6000);
+        }
+    </script>
 </body>
-
 </html>
